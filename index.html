@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charan Teja - Software Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .gradient-hero {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #1e3a8a 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .typing::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-600">Charan Teja</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-hero min-h-screen flex items-center justify-center text-white pt-16">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <div class="fade-in">
+                <div class="mb-8">
+                    <img src="https://i.imghippo.com/files/DqFq1029YdU.jpg" alt="Charan Teja - Profile Picture" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-white shadow-2xl object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display: none;" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-white shadow-2xl bg-blue-200 flex items-center justify-center text-4xl">👨‍💻</div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    Hi, I'm <span class="typing">Charan Teja</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-4 text-blue-100">Computer Science Student</p>
+                <p class="text-lg md:text-xl mb-8 text-blue-50">Aspiring Software Engineer</p>
+                <p class="text-base mb-12 max-w-2xl mx-auto text-blue-100 leading-relaxed">
+                    Enthusiastic Computer Science Student with core knowledge of Java. Eager to contribute to innovative projects as a Software Engineer while continuously upgrading technical skills and adding value to the Organisation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="downloadResume()" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg">
+                        📄 Download Resume
+                    </button>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">About Me</h2>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">My Journey</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        I'm an enthusiastic Computer Science student at Excel Engineering College with a strong foundation in programming and software development. My passion lies in creating innovative solutions that solve real-world problems.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Currently maintaining a CGPA of 7.5/10, I've gained practical experience through my work at AccentTechno Soft, where I worked on full-stack development projects and enhanced my technical skills.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Problem Solver</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Team Player</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">Quick Learner</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h4 class="text-xl font-semibold mb-6 text-gray-800">🎓 Education</h4>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h5 class="font-semibold text-blue-600">BE Computer Science & Engineering</h5>
+                            <p class="text-gray-600">Excel Engineering College, Komarapalayam, Namakkal</p>
+                            <p class="text-sm text-gray-500">2022-2026 • CGPA: 7.5/10</p>
+                        </div>
+                        <div class="border-l-4 border-gray-300 pl-4">
+                            <h5 class="font-semibold">Higher Secondary (12th)</h5>
+                            <p class="text-gray-600">Sri Saraswathi Vidyalaya Higher Secondary School, Krishnagiri</p>
+                            <p class="text-sm text-gray-500">08/2020-05/2022 • 76.5%</p>
+                        </div>
+                        <div class="border-l-4 border-gray-300 pl-4">
+                            <h5 class="font-semibold">Secondary (10th)</h5>
+                            <p class="text-gray-600">Sri Saraswathi Vidyalaya Higher Secondary School, Krishnagiri</p>
+                            <p class="text-sm text-gray-500">08/2019-05/2020 • 96.8%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Featured Project</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover border">
+                    <div class="md:flex">
+                        <div class="md:w-2/5 bg-gradient-to-br from-purple-600 to-blue-600 p-4 flex items-center justify-center">
+                            <div class="w-full">
+                                <img src="https://i.imghippo.com/files/PdBP3869oo.jpg" alt="Movie Recommendation System Screenshot" class="w-full h-full object-cover rounded-lg shadow-lg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div style="display: none;" class="text-center text-white h-full flex flex-col justify-center">
+                                    <div class="text-6xl mb-4">🎬</div>
+                                    <h3 class="text-2xl font-bold mb-2">Movie Recommender</h3>
+                                    <p class="text-blue-100">AI-Powered Web App</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-3/5 p-8">
+                            <h3 class="text-2xl font-bold mb-4 text-gray-800">Movie Recommendation System</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Built an interactive web application using Streamlit that recommends movies through content-based filtering with a precomputed similarity matrix. Integrated TMDB API for fetching live movie details and posters.
+                            </p>
+                            <div class="mb-6">
+                                <h4 class="font-semibold mb-3 text-gray-800">🛠️ Technologies Used:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Streamlit</span>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">TMDB API</span>
+                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Content-Based Filtering</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <button onclick="viewProject()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                                    🚀 View Project
+                                </button>
+                                <button onclick="viewCode()" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium">
+                                    💻 View Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Experience</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                            <span class="text-2xl">💼</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Full-Stack Developer</h3>
+                            <p class="text-blue-600 font-medium mb-2">AccentTechno Soft (ATS)</p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Gained Practical Experience in full stack development. Worked on projects involving both front-end and back-end technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Skills & Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Programming Skills -->
+                <div class="bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl mb-4">💻</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Programming</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">Java</span>
+                                <span class="text-blue-600 text-sm">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">HTML</span>
+                                <span class="text-blue-600 text-sm">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">CSS</span>
+                                <span class="text-blue-600 text-sm">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl mb-4">🛠️</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Tools & Technologies</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">Git & GitHub</span>
+                            <span class="text-green-600 text-xl">✓</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">Streamlit</span>
+                            <span class="text-green-600 text-xl">✓</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">TMDB API</span>
+                            <span class="text-green-600 text-xl">✓</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">Version Control</span>
+                            <span class="text-green-600 text-xl">✓</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl mb-4">🏆</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Certifications</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-center p-4 bg-white rounded-lg">
+                            <p class="font-medium text-gray-800">MongoDB Certification</p>
+                            <p class="text-sm text-gray-500">Learnthon</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg">
+                            <p class="font-medium text-gray-800">Java Certification</p>
+                            <p class="text-sm text-gray-500">Kodacy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="text-center">
+                <h3 class="text-2xl font-semibold mb-8 text-gray-800">🌍 Languages</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full font-medium">English (Fluent)</span>
+                    <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full font-medium">Tamil (Fluent)</span>
+                    <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full font-medium">Telugu</span>
+                    <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full font-medium">Kannada</span>
+                    <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full font-medium">Hindi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">Let's Connect!</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-2xl">📧</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Email</p>
+                                    <a href="mailto:charan33317@gmail.com" class="text-blue-600 hover:text-blue-700 transition-colors">charan33317@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-2xl">📱</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Phone</p>
+                                    <a href="tel:9952607589" class="text-blue-600 hover:text-blue-700 transition-colors">+91 9952607589</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-2xl">💼</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/charan-teja-58111328b" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 transition-colors">Connect with me</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-2xl">💻</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">GitHub</p>
+                                    <a href="https://github.com/Charan333CG" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 transition-colors">View my code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Your Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                                <textarea rows="4" name="message" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                Send Message 🚀
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-4">Charan Teja</h3>
+                <p class="text-gray-400 mb-6">Computer Science Student & Aspiring Software Engineer</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="mailto:charan33317@gmail.com" class="text-gray-400 hover:text-white transition-colors text-2xl">📧</a>
+                    <a href="tel:9952607589" class="text-gray-400 hover:text-white transition-colors text-2xl">📱</a>
+                    <a href="https://www.linkedin.com/in/charan-teja-58111328b" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors text-2xl">💼</a>
+                    <a href="https://github.com/Charan333CG" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors text-2xl">💻</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-400">&copy; 2024 Charan Teja. All rights reserved. Built with passion ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Download resume function with actual resume content
+        function downloadResume() {
+            const resumeContent = `CHARAN TEJA
+charan33317@gmail.com | 9952607589
+
+EXECUTIVE SUMMARY
+Enthusiastic Computer Science Student with core knowledge of Java. Eager to contribute to innovative
+projects as a Software Engineer while continuously upgrading technical skills and adding value to the
+Organisation. Looking forward to apply technical knowledge and problem-solving abilities to contribute to
+real-world software solutions.
+
+EDUCATION
+Bachelor of Engineering (BE) - Computer Science & Engineering                    2022-2026
+Excel Engineering College, Komarapalayam, Namakkal
+• CGPA: 7.5/10
+
+Higher Secondary Education (12th Standard)                                      08/2020-05/2022
+Sri Saraswathi Vidyalaya Higher Secondary School, Krishnagiri
+• Percentage: 76.5%
+
+Secondary Education (10th Standard)                                             08/2019-05/2020
+Sri Saraswathi Vidyalaya Higher Secondary School, Krishnagiri
+• Percentage: 96.8%
+
+SKILLS
+Programming Language: HTML, CSS, JAVA
+Version Control: Git & Github
+
+EXPERIENCE
+AccentTechno Soft (ATS)
+Gained Practical Experience in full stack development.
+Worked on projects involving both front-end and back-end technologies.
+
+PROJECT
+Movie Recommendation System
+Built an interactive web application using Streamlit that recommends movies
+through content-based filtering with a precomputed similarity matrix. Integrated
+TMDB API for fetching live movie details and posters.
+
+CERTIFICATIONS
+• MongoDB Certification Course – Learnthon
+• Java Certification (Kodacy)
+
+LANGUAGES KNOWN
+English - Speak, Read, and Write
+Tamil - Speak, Read, and Write
+Telugu - Speak
+Kannada - Speak
+Hindi - Speak`;
+
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Charan_Teja_Resume.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            alert('Resume downloaded successfully! 📄');
+        }
+
+        // Project functions
+        function viewProject() {
+            window.open('https://github.com/Charan333CG', '_blank');
+        }
+
+        function viewCode() {
+            window.open('https://github.com/Charan333CG', '_blank');
+        }
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = this.querySelector('input[name="name"]').value;
+            const email = this.querySelector('input[name="email"]').value;
+            const message = this.querySelector('textarea[name="message"]').value;
+            
+            if (name && email && message) {
+                alert(`Thank you ${name}! 🎉 Your message has been received. I'll get back to you at ${email} soon!`);
+                this.reset();
+            } else {
+                alert('Please fill in all fields before submitting. 📝');
+            }
+        });
+
+        // Add scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.8s ease-out';
+            observer.observe(section);
+        });
+
+        // Initialize first section
+        document.querySelector('#home').style.opacity = '1';
+        document.querySelector('#home').style.transform = 'translateY(0)';
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98728602d091182b',t:'MTc1OTIyMjc1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
